@@ -3,6 +3,7 @@ import { css, Global } from "@emotion/react";
 import emotionReset from "emotion-reset";
 import "@fontsource/raleway/700.css";
 import "@fontsource/inter/300.css";
+import "@fontsource/inter/500.css";
 
 const GlobalStyle = (): ReactElement => {
   return (
