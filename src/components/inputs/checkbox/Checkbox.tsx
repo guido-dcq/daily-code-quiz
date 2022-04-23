@@ -1,11 +1,5 @@
 // Vendor
-import {
-  AllHTMLAttributes,
-  ChangeEvent,
-  ReactElement,
-  useRef,
-  useState,
-} from "react";
+import { AllHTMLAttributes, ChangeEvent, ReactElement, useState } from "react";
 
 // Style
 import * as S from "./checkbox.style";
