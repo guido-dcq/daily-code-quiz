@@ -1,5 +1,11 @@
 // Vendor
-import { AllHTMLAttributes, ChangeEvent, ReactElement } from "react";
+import {
+  AllHTMLAttributes,
+  ChangeEvent,
+  ReactElement,
+  useRef,
+  useState,
+} from "react";
 
 // Style
 import * as S from "./checkbox.style";
@@ -16,10 +22,20 @@ const Checkbox = ({
   label,
   ...props
 }: CheckboxProps): ReactElement => {
+  const [isChecked, setIsChecked] = useState<boolean>(false);
+
   return (
-    <S.Checkbox>
-      <input type="checkbox" data-testid="checkbox" {...props} />
-      <div>
+    <S.Checkbox
+      className={isChecked ? "is-checked" : ""}
+      onClick={() => setIsChecked(!isChecked)}
+    >
+      <input
+        type="checkbox"
+        onChange={() => setIsChecked(!isChecked)}
+        data-testid="checkbox"
+        {...props}
+      />
+      <div className="checkbox__label-wrapper">
         <label htmlFor={props.id ? props.id : ""}>Do you like cheese?</label>
       </div>
     </S.Checkbox>

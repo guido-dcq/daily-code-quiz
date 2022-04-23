@@ -6,6 +6,12 @@ export const Checkbox = styled.div`
   border: 1px solid #d2d6dc;
   padding: 20px 10px;
   border-radius: 8px;
+  cursor: pointer;
+
+  &.is-checked {
+    background-color: #f5f3ff;
+    border-color: #7c3aed;
+  }
 
   input[type="checkbox"]:hover {
     cursor: pointer;
@@ -24,9 +30,10 @@ export const Checkbox = styled.div`
     flex-shrink: 0;
   }
 
+  &.is-checked input[type="checkbox"],
   input[type="checkbox"]:checked {
     border: 1px solid transparent;
-    background-color: purple;
+    background-color: rgb(124, 77, 255);
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;

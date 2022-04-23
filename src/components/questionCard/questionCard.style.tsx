@@ -42,4 +42,8 @@ export const QuestionCard = styled.article`
   .question-card__question-wrapper {
     padding: 50px 40px 30px 40px;
   }
+
+  .checkbox__label-wrapper {
+    margin-top: 1px;
+  }
 `;
