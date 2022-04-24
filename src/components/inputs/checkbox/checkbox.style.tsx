@@ -13,6 +13,10 @@ export const Checkbox = styled.div`
     border-color: ${({ theme }) => theme.colors.primary.default};
   }
 
+  .checkbox__label {
+    cursor: pointer;
+  }
+
   input[type="checkbox"]:hover {
     cursor: pointer;
   }

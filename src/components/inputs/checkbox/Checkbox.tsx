@@ -18,6 +18,8 @@ const Checkbox = ({
 }: CheckboxProps): ReactElement => {
   const [isChecked, setIsChecked] = useState<boolean>(false);
 
+  console.log({ isChecked });
+
   return (
     <S.Checkbox
       className={isChecked ? "is-checked" : ""}
@@ -25,12 +27,25 @@ const Checkbox = ({
     >
       <input
         type="checkbox"
-        onChange={() => setIsChecked(!isChecked)}
+        onChange={(e) => {
+          e.stopPropagation();
+          setIsChecked(!isChecked);
+        }}
+        checked={isChecked}
         data-testid="checkbox"
         {...props}
       />
       <div className="checkbox__label-wrapper">
-        <label htmlFor={props.id ? props.id : ""}>Do you like cheese?</label>
+        <label
+          htmlFor={props.id ? props.id : ""}
+          onClick={(e) => {
+            e.preventDefault();
+            setIsChecked(!isChecked);
+          }}
+          className="checkbox__label"
+        >
+          Do you like cheese?
+        </label>
       </div>
     </S.Checkbox>
   );

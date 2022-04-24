@@ -45,36 +45,37 @@ function QuestionCard() {
         onSubmit={(e) => {
           e.preventDefault();
         }}
-      ></form>
-      <div className="question-card__question-wrapper">
-        <Checkbox
-          id="question-1"
-          name="question-1"
-          onChange={(e) => console.log(e.target.value)}
-          label="Function that is called on first render"
-        />
-        <Checkbox
-          id="question-2"
-          name="question-2"
-          onChange={(e) => console.log(e.target.value)}
-          label="Function that is called on first render"
-        />
-        <Checkbox
-          id="question-3"
-          name="question-3"
-          onChange={(e) => console.log(e.target.value)}
-          label="Function that is called on first render"
-        />
-        <Checkbox
-          id="question-4"
-          name="question-4"
-          onChange={(e) => console.log(e.target.value)}
-          label="Function that is called on first render"
-        />
-      </div>
-      <div className="question-card__button-wrapper">
-        <Button text="Answer question" variant="primary" />
-      </div>
+      >
+        <div className="question-card__question-wrapper">
+          <Checkbox
+            id="question-1"
+            name="question-1"
+            onChange={(e) => console.log(e.target.value)}
+            label="Function that is called on first render"
+          />
+          <Checkbox
+            id="question-2"
+            name="question-2"
+            onChange={(e) => console.log(e.target.value)}
+            label="Function that is called on first render"
+          />
+          <Checkbox
+            id="question-3"
+            name="question-3"
+            onChange={(e) => console.log(e.target.value)}
+            label="Function that is called on first render"
+          />
+          <Checkbox
+            id="question-4"
+            name="question-4"
+            onChange={(e) => console.log(e.target.value)}
+            label="Function that is called on first render"
+          />
+        </div>
+        <div className="question-card__button-wrapper">
+          <Button text="Answer question" variant="primary" />
+        </div>
+      </form>
     </S.QuestionCard>
   );
 }
