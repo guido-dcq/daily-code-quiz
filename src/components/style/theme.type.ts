@@ -97,7 +97,7 @@ export default interface Theme {
       title: string;
     };
     fontWeights: {
-      regular: 400;
+      regular: 300;
       medium: 500;
       semiBold: 600;
       bold: 700;

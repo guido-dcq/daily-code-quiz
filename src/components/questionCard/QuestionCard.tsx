@@ -3,6 +3,7 @@ import * as S from "./questionCard.style";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { materialLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 import Checkbox from "../inputs/checkbox/Checkbox";
+import Button from "../buttons/Button";
 
 const code = `const woah = fun => fun + 1;
 const dude = woah(2) + 3;
@@ -70,6 +71,9 @@ function QuestionCard() {
           onChange={(e) => console.log(e.target.value)}
           label="Function that is called on first render"
         />
+      </div>
+      <div className="question-card__button-wrapper">
+        <Button text="Answer question" variant="primary" />
       </div>
     </S.QuestionCard>
   );

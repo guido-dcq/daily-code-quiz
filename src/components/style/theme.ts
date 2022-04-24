@@ -116,7 +116,7 @@ const theme: Theme = {
       title: "3em",
     },
     fontWeights: {
-      regular: 400,
+      regular: 300,
       medium: 500,
       semiBold: 600,
       bold: 700,

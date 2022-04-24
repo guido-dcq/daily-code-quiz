@@ -16,7 +16,7 @@ const GlobalStyle = (): ReactElement => {
 
           html {
             font-size: 14px;
-            font-family: "Inter", sans-serif;
+            font-family: ${theme.font.fontFamilyMain};
           }
 
           body {
@@ -30,7 +30,8 @@ const GlobalStyle = (): ReactElement => {
           }
 
           p {
-            font-weight: 300;
+            font-weight: ${theme.font.fontWeights.regular};
+            font-size: ${theme.font.fontSizes.body};
           }
 
           h1,
@@ -42,25 +43,29 @@ const GlobalStyle = (): ReactElement => {
             background: none;
             margin-top: 0;
             margin-bottom: 0.6em;
-            font-weight: 700;
-            font-family: "Raleway", sans-serif;
+            font-weight: ${theme.font.fontWeights.bold};
+            font-family: ${theme.font.fontFamilySecondary};
             color: ${theme.colors.text.primary};
           }
 
           h1 {
-            font-size: 2.29rem;
+            font-size: ${theme.font.fontSizes.h1};
           }
 
           h2 {
-            font-size: 1.71rem;
+            font-size: ${theme.font.fontSizes.h2};
           }
 
           h3 {
-            font-size: 1.43rem;
+            font-size: ${theme.font.fontSizes.h3};
           }
 
           h4 {
-            font-size: 1.28rem;
+            font-size: ${theme.font.fontSizes.h4};
+          }
+
+          span {
+            font-size: ${theme.font.fontSizes.caption};
           }
         `}
       />

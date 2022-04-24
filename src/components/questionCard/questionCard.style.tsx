@@ -47,4 +47,10 @@ export const QuestionCard = styled.article`
   .checkbox__label-wrapper {
     margin-top: 1px;
   }
+
+  .question-card__button-wrapper {
+    padding: 13px 40px 50px 40px;
+    display: flex;
+    justify-content: flex-end;
+  }
 `;
