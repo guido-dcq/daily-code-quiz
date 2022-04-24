@@ -7,6 +7,7 @@ export const QuestionCard = styled.article`
   max-width: 700px;
   filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07))
     drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+  margin: 40px 0;
 
   .question-card__counter-wrapper {
     background-color: #1e293b;

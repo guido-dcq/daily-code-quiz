@@ -1,11 +1,12 @@
 import * as S from "./app.style";
+import { useEffect } from "react";
+import { ThemeProvider } from "@emotion/react";
 import { db, getQuestions } from "../../firebase";
 
 // Components
 import QuestionCard from "../questionCard/QuestionCard";
 import GlobalStyle from "../style/GlobalStyle";
-import { useEffect } from "react";
-import { child, get, onValue, ref } from "firebase/database";
+import theme from "../style/theme";
 
 function App() {
   useEffect(() => {
@@ -18,10 +19,12 @@ function App() {
   }, []);
 
   return (
-    <S.App>
-      <GlobalStyle />
-      <QuestionCard />
-    </S.App>
+    <ThemeProvider theme={theme}>
+      <S.App>
+        <GlobalStyle />
+        <QuestionCard />
+      </S.App>
+    </ThemeProvider>
   );
 }
 

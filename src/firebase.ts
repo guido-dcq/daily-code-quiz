@@ -20,8 +20,6 @@ const firebaseConfig = {
   measurementId: process.env.REACT_APP_MID,
 };
 
-console.log(process.env.REACT_APP_APIKEY);
-
 const app = initializeApp(firebaseConfig);
 const db = initializeFirestore(app, {
   experimentalForceLongPolling: true,
@@ -29,10 +27,10 @@ const db = initializeFirestore(app, {
 
 // https://firebase.google.com/docs/web/setup
 async function getQuestions(db: Firestore) {
-  const citiesCol = collection(db, "quiz_questions");
-  const citySnapshot = await getDocs(citiesCol);
-  const cityList = citySnapshot.docs.map((doc) => doc.data());
-  return cityList;
+  const questionsCol = collection(db, "quiz_questions");
+  const questionsSnapshot = await getDocs(questionsCol);
+  const quesetionsList = questionsSnapshot.docs.map((doc) => doc.data());
+  return quesetionsList;
 }
 
 export { db, getQuestions };
