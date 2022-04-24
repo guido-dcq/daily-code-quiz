@@ -1,11 +1,13 @@
 import { ReactElement } from "react";
-import { css, Global } from "@emotion/react";
+import { css, Global, Theme, useTheme } from "@emotion/react";
 import emotionReset from "emotion-reset";
 import "@fontsource/raleway/700.css";
 import "@fontsource/inter/300.css";
 import "@fontsource/inter/500.css";
 
 const GlobalStyle = (): ReactElement => {
+  const theme: Theme = useTheme();
+
   return (
     <>
       <Global
@@ -24,7 +26,7 @@ const GlobalStyle = (): ReactElement => {
             width: 100%;
             margin: 0;
             line-height: 1.5;
-            color: #1a202c;
+            color: ${theme.colors.text.primary};
           }
 
           p {
@@ -42,7 +44,7 @@ const GlobalStyle = (): ReactElement => {
             margin-bottom: 0.6em;
             font-weight: 700;
             font-family: "Raleway", sans-serif;
-            color: #111;
+            color: ${theme.colors.text.primary};
           }
 
           h1 {

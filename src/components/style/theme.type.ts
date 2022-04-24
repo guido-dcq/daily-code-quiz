@@ -59,6 +59,9 @@ interface Colors {
     900: string;
   };
 
+  backgrounColors: {
+    purple: string;
+  };
   primary: Color;
   accent: Color;
   positive: Color;

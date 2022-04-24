@@ -10,7 +10,7 @@ export const QuestionCard = styled.article`
   margin: 40px 0;
 
   .question-card__counter-wrapper {
-    background-color: #1e293b;
+    background-color: ${({ theme }) => theme.colors.gray[800]};
     padding: 18px 40px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -30,14 +30,14 @@ export const QuestionCard = styled.article`
   }
 
   .question-card__info-title {
-    color: white;
+    color: ${({ theme }) => theme.colors.white};
     margin-bottom: 0;
   }
 
   .question-card__code {
     padding: 30px 42px !important; /* package overwrite */
-    border-top: 1px solid #eaeaea;
-    border-bottom: 1px solid #eaeaea;
+    border-top: 1px solid ${({ theme }) => theme.colors.gray[200]};
+    border-bottom: 1px solid ${({ theme }) => theme.colors.gray[200]};
   }
 
   .question-card__question-wrapper {

@@ -28,6 +28,10 @@ export const gray = {
   900: "#111827",
 };
 
+export const backgrounColors = {
+  purple: "#d8b4fe",
+};
+
 export const purple = {
   lighter: "#f5f3ff",
   light: "#ddd6fe",
@@ -74,6 +78,7 @@ const theme: Theme = {
     white,
     text,
     gray,
+    backgrounColors,
     primary: purple,
     accent: purple,
     positive: green,

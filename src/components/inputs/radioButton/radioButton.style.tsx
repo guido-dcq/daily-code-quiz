@@ -15,7 +15,7 @@ export const RadioButton = styled.div`
     height: 15px;
     width: 15px;
     background-color: transparent;
-    border: 1px solid #9ca3af;
+    border: 1px solid ${({ theme }) => theme.colors.gray[200]};
     transform: translate3d(0, 1px, 0);
     margin-right: 10px;
     flex-shrink: 0;
@@ -23,7 +23,7 @@ export const RadioButton = styled.div`
 
   input[type="radio"]:checked {
     border: 1px solid transparent;
-    background-color: #9ca3af;
+    background-color: ${({ theme }) => theme.colors.primary.default};
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;

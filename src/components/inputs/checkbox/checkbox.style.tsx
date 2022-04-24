@@ -3,14 +3,14 @@ import styled from "@emotion/styled";
 export const Checkbox = styled.div`
   display: flex;
   margin-bottom: 10px;
-  border: 1px solid #d2d6dc;
+  border: 1px solid ${({ theme }) => theme.colors.gray[200]};
   padding: 20px 10px;
   border-radius: 8px;
   cursor: pointer;
 
   &.is-checked {
-    background-color: #f5f3ff;
-    border-color: #7c3aed;
+    background-color: ${({ theme }) => theme.colors.primary.lighter};
+    border-color: ${({ theme }) => theme.colors.primary.default};
   }
 
   input[type="checkbox"]:hover {
@@ -24,7 +24,7 @@ export const Checkbox = styled.div`
     height: 16px;
     width: 16px;
     background-color: transparent;
-    border: 1px solid #9ca3af;
+    border: 1px solid ${({ theme }) => theme.colors.gray[200]};
     transform: translate3d(0, 1px, 0);
     margin-right: 8px;
     flex-shrink: 0;
@@ -33,7 +33,7 @@ export const Checkbox = styled.div`
   &.is-checked input[type="checkbox"],
   input[type="checkbox"]:checked {
     border: 1px solid transparent;
-    background-color: rgb(124, 77, 255);
+    background-color: ${({ theme }) => theme.colors.primary.dark};
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
