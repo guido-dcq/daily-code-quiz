@@ -36,8 +36,9 @@ export const QuestionCard = styled.article`
 
   .question-card__code {
     padding: 30px 42px !important; /* package overwrite */
-    border-top: 1px solid ${({ theme }) => theme.colors.gray[200]};
-    border-bottom: 1px solid ${({ theme }) => theme.colors.gray[200]};
+    background: #222437 !important; /* package overwrite */
+    border: none !important; /* package overwrite */
+    border-radius: 0 !important; /* package overwrite */
   }
 
   .question-card__question-wrapper {

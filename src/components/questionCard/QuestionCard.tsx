@@ -1,7 +1,8 @@
 // Style
 import * as S from "./questionCard.style";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { materialLight } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { xonokai as syntaxTheme } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { Link } from "react-router-dom";
 import Checkbox from "../inputs/checkbox/Checkbox";
 import Button from "../buttons/Button";
 
@@ -37,7 +38,7 @@ function QuestionCard() {
       <SyntaxHighlighter
         language="javascript"
         className="question-card__code"
-        style={materialLight}
+        style={syntaxTheme}
       >
         {code}
       </SyntaxHighlighter>
@@ -73,7 +74,9 @@ function QuestionCard() {
           />
         </div>
         <div className="question-card__button-wrapper">
-          <Button text="Answer question" variant="primary" />
+          <Link to="/success">
+            <Button text="Answer question" variant="primary" />
+          </Link>
         </div>
       </form>
     </S.QuestionCard>
