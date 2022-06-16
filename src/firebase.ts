@@ -20,6 +20,18 @@ const firebaseConfig = {
   measurementId: process.env.REACT_APP_MID,
 };
 
+console.log(process.env);
+
+// const firebaseConfig = {
+//   apiKey: "AIzaSyC8HQwZ9q0VFGCSrsZaOqUx1q99XurEYfI",
+//   authDomain: "dailycodequiz-1c676.firebaseapp.com",
+//   projectId: "dailycodequiz-1c676",
+//   storageBucket: "dailycodequiz-1c676.appspot.com",
+//   messagingSenderId: "478131497366",
+//   appId: "1:478131497366:web:4addf304139a2431d715b7",
+//   measurementId: "G-B2LZK4W5NV",
+// };
+
 const app = initializeApp(firebaseConfig);
 const db = initializeFirestore(app, {
   experimentalForceLongPolling: true,
@@ -27,7 +39,7 @@ const db = initializeFirestore(app, {
 
 // https://firebase.google.com/docs/web/setup
 async function getQuestions(db: Firestore) {
-  const questionsCol = collection(db, "quiz_questions");
+  const questionsCol = collection(db, "questions");
   const questionsSnapshot = await getDocs(questionsCol);
   const quesetionsList = questionsSnapshot.docs.map((doc) => doc.data());
   return quesetionsList;
