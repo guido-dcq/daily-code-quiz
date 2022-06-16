@@ -18,8 +18,6 @@ const Checkbox = ({
 }: CheckboxProps): ReactElement => {
   const [isChecked, setIsChecked] = useState<boolean>(false);
 
-  console.log({ isChecked });
-
   return (
     <S.Checkbox
       className={isChecked ? "is-checked" : ""}

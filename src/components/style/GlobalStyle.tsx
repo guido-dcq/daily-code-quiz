@@ -19,6 +19,12 @@ const GlobalStyle = (): ReactElement => {
             font-family: ${theme.font.fontFamilyMain};
           }
 
+          #root,
+          html,
+          body {
+            height: 100%;
+          }
+
           body {
             top: 0;
             left: 0;

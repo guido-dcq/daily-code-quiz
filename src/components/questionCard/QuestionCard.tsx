@@ -20,65 +20,68 @@ function itIs() {
 function QuestionCard() {
   return (
     <S.QuestionCard>
-      <div className="question-card__counter-wrapper">
+      {/* <div className="question-card__counter-wrapper">
         <p className="question-card__counter">2 of 4</p>
-      </div>
-      <div className="question-card__question-wrapper">
-        <h2>
-          <span
-            role="img"
-            aria-label="hand waving"
-            className="question-card__info-emoji"
+      </div> */}
+      <div className="card__wrapper">
+        <SyntaxHighlighter
+          language="javascript"
+          className="question-card__code"
+          style={syntaxTheme}
+        >
+          {code}
+        </SyntaxHighlighter>
+        <div className="question-card__title-wrapper">
+          <h2>
+            <span
+              role="img"
+              aria-label="hand waving"
+              className="question-card__info-emoji"
+            >
+              👋
+            </span>
+            What is a callback function?
+          </h2>
+
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+            }}
           >
-            👋
-          </span>
-          What is a callback function?
-        </h2>
+            <div className="question-card__question-wrapper">
+              <Checkbox
+                id="question-1"
+                name="question-1"
+                onChange={(e) => console.log(e.target.value)}
+                label="Function that is called on first render"
+              />
+              <Checkbox
+                id="question-2"
+                name="question-2"
+                onChange={(e) => console.log(e.target.value)}
+                label="Function that is called on first render"
+              />
+              <Checkbox
+                id="question-3"
+                name="question-3"
+                onChange={(e) => console.log(e.target.value)}
+                label="Function that is called on first render"
+              />
+              <Checkbox
+                id="question-4"
+                name="question-4"
+                onChange={(e) => console.log(e.target.value)}
+                label="Function that is called on first render"
+              />
+            </div>
+            <div className="question-card__button-wrapper">
+              <Link to="/success">
+                <Button text="Answer question" variant="primary" />
+              </Link>
+            </div>
+          </form>
+        </div>
       </div>
-      <SyntaxHighlighter
-        language="javascript"
-        className="question-card__code"
-        style={syntaxTheme}
-      >
-        {code}
-      </SyntaxHighlighter>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-        }}
-      >
-        <div className="question-card__question-wrapper">
-          <Checkbox
-            id="question-1"
-            name="question-1"
-            onChange={(e) => console.log(e.target.value)}
-            label="Function that is called on first render"
-          />
-          <Checkbox
-            id="question-2"
-            name="question-2"
-            onChange={(e) => console.log(e.target.value)}
-            label="Function that is called on first render"
-          />
-          <Checkbox
-            id="question-3"
-            name="question-3"
-            onChange={(e) => console.log(e.target.value)}
-            label="Function that is called on first render"
-          />
-          <Checkbox
-            id="question-4"
-            name="question-4"
-            onChange={(e) => console.log(e.target.value)}
-            label="Function that is called on first render"
-          />
-        </div>
-        <div className="question-card__button-wrapper">
-          <Link to="/success">
-            <Button text="Answer question" variant="primary" />
-          </Link>
-        </div>
-      </form>
     </S.QuestionCard>
   );
 }

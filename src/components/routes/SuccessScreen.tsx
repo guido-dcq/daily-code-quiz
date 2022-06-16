@@ -1,7 +1,9 @@
-function SuccessScreen() {
+import { ReactElement } from "react";
+
+function SuccessScreen(): ReactElement {
   return (
     <main>
-      <h2>SuccessScreen</h2>
+      <h1>Success</h1>
     </main>
   );
 }
