@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import {
+  addDoc,
   collection,
   Firestore,
   getDocs,
@@ -33,4 +34,19 @@ async function getQuestions(db: Firestore) {
   return quesetionsList;
 }
 
-export { db, getQuestions };
+async function createQuestion(
+  db: Firestore,
+  question: {
+    answers: string[];
+    description: string;
+    correctAnswer: string;
+    syntax: string;
+    title: string;
+  }
+) {
+  const questionsCol = collection(db, "questions");
+  const questionSnapshot = await addDoc(questionsCol, question);
+  return questionSnapshot;
+}
+
+export { db, getQuestions, createQuestion };

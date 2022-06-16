@@ -3,6 +3,7 @@ import * as S from "./questionCard.style";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { xonokai as syntaxTheme } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { Link } from "react-router-dom";
+import { db, createQuestion } from "../../firebase";
 import Checkbox from "../inputs/checkbox/Checkbox";
 import Button from "../buttons/Button";
 
